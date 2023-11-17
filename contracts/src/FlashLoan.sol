@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.20;
-
+pragma solidity ^0.8.20;
 
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {IERC20Metadata} from "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol";
@@ -40,17 +39,6 @@ contract SimpleFlashLoan is FlashLoanSimpleReceiverBase {
     }
 
 
-    /**
-        This function is called after your contract has received the flash loaned amount
-     */
-    function  executeOperation(
-        address asset,
-        uint256 amount,
-        uint256 premium,
-        address initiator,
-        bytes calldata params
-    )  external override returns (bool) {
-        
     /// @notice Adds collateral using bot
     /// @param _token token address
     /// @param _creditManager manager address
@@ -153,6 +141,17 @@ contract SimpleFlashLoan is FlashLoanSimpleReceiverBase {
         ICreditFacadeV3(facade).botMulticall(_creditAccount, calls);
     }
 
+    /**
+        This function is called after your contract has received the flash loaned amount
+     */
+    function  executeOperation(
+        address asset,
+        uint256 amount,
+        uint256 premium,
+        address initiator,
+        bytes calldata params
+    )  external override returns (bool) {
+        
         //Logic goes here
         
         uint256 totalAmount = amount + premium;
