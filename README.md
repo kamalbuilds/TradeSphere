@@ -19,6 +19,7 @@ Deploy on scroll , gnosis
 API3 price feed calls
 
 Curvegrid - Building SocialFi using MultiBass API
+https://do7qenwji5gedjg53jykeaa3h4.multibaas.com/
 
 Chronicle Scribe calls to read the onchain Feeds
 
