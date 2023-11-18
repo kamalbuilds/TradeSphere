@@ -56,7 +56,7 @@ Stack used:
 - **[React Query](https://react-query.tanstack.com/)**: Utility for fetching, caching and updating data from Lens.
 
 
-Steps to use for Using Transaction Builder for staking
+Steps to use for Using Hooks Builder for staking
 1. Make sure you have connected with safe and your safe has been deployed.
 2. First you need to allow USDC Address -> 0xe27658a36cA8A59fE5Cc76a14Bde34a51e587ab4
    1. Go to Pre Hook, Enter Contract Address (i.e,0xe27658a36cA8A59fE5Cc76a14Bde34a51e587ab4). Click on Get Functions, it will fetch ABI from etherscan and display available functions and select the function 'approve' from the dropdown.

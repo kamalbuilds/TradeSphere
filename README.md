@@ -60,3 +60,17 @@ Stack used:
 - **[GraphQL](https://graphql.org/)** and **[urql](https://formidable.com/open-source/urql/)**: Query data from Lens with GraphQL.
 - **[React Query](https://react-query.tanstack.com/)**: Utility for fetching, caching and updating data from Lens.
 
+Steps to use for Using Transaction Builder for staking
+1. Make sure you have connected with safe and your safe has been deployed.
+2. First you need to allow USDC Address -> 0xe27658a36cA8A59fE5Cc76a14Bde34a51e587ab4
+   1. Go to Pre Hook, Enter Contract Address (i.e,0xe27658a36cA8A59fE5Cc76a14Bde34a51e587ab4). Click on Get Functions, it will fetch ABI from etherscan and display available functions and select the function 'approve' from the dropdown.
+   2. Enter spender addresss (i.e, GPV2Realyer = 0xC92E8bdf79f0507f65a392b0ab4667716BFE0110 and enter value in uint256 i.e, 1 USDC = 1000000).
+   3. Click on set Pre Hook to set approval as pre hook function.
+   4. After setting Pre Hook, Click on Get Quote this will fetch the best price from the Cow Protocol for Cow Token by selling USDC.
+   5. After Clicking on get Quote, you can see Fetched Quote.
+   6. Sell Token is USDC, Buy Token is Cow Token.
+3. After Getting Quote, Click on Post Hook for setting post hook function.
+4. Enter Staking Addresss (i.e, 0x553f41489A719ED723Eb493fdB6DB494453143af). Click on Get Functions, it will fetch ABI from etherscan and display available functions and select the function 'stake' from the dropdown.
+5. After Clicking, Enter the value that you want to stake. (Remember: You can stake Cow Token till the amount that is fetched from Quote from Cow Swap.)
+6. Click on Set Post Hook. When you see Post Hook Set, Click on Generate Order UID. Sign the Metamask pop up and boom you can get the order Id in console and you have staked Cow Token into the staking contract.
+
