@@ -1,0 +1,177 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: black;
+  font-family: Arial, sans-serif;
+}
+
+.app h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.app .web3card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.app .web3card:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+
+.app .web3-card .identity,
+.app .web3-card .platform,
+.app .web3-card .description {
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.app .web3-card .identity {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.app .web3-card .platform {
+  color: #999;
+}
+
+.app .web3-card .links a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.app .web3-card .links a:hover {
+  text-decoration: underline;
+}
+
+.profilecard {
+  background: #fff;
+  border: .05rem solid hsla(0,0%,7%,.075);
+  border-radius: .8rem;
+  display: flex;
+  flex: 1 0;
+  flex-direction: column;
+  max-width: 24rem;
+  padding: 1rem;
+  transition: transform .15s ease;
+  width: 100%
+}
+
+.profilecard .cardavatar {
+  flex: 0 1
+}
+
+.profilecard .cardavatar .avatar {
+  background: #ababab;
+  box-shadow: inset 0 0 0 .2rem hsla(0,0%,100%,.1);
+  height: 2.4rem;
+  width: 2.4rem;
+  border-radius: 100%;
+}
+
+.profilecard .cardcontent {
+  flex: 1 1;
+  padding: .5rem 0;
+  width: 100%
+}
+
+.profilecard .cardname {
+  font-size: 1rem;
+  font-weight: 900
+}
+
+.profilecard .cardidentity {
+  color: #ababab;
+  font-size: .65rem;
+  margin-bottom: .5rem
+}
+
+.profilecard .carddescription {
+  font-size: .7rem
+}
+
+.profilecard .cardbadges {
+  align-items: center;
+  color: #6b6b6b;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .6rem;
+  line-height: 1rem;
+  gap: .2rem
+}
+
+.profilecard .cardbadges .platformbadge {
+  align-items: center;
+  border: .05rem solid transparent;
+  box-shadow: inset 0 0 .1rem hsla(0,0%,7%,.1);
+  border-radius: .8rem;
+  display: flex;
+  height: 1.5rem;
+  padding: .15rem;
+  text-decoration: none;
+  transition: all .2s ease
+}
+
+.profilecard .cardbadges .platformbadge.active {
+  box-shadow: inset 0 0 .05rem hsla(0,0%,7%,.25)
+}
+
+.profilecard .cardbadges .platformbadge .platformbadge-icon {
+  align-items: center;
+  border-radius: .7rem;
+  display: flex;
+  flex: 0 0 1.2rem;
+  height: 1.3rem;
+  justify-content: center;
+  padding: .15rem;
+  width: 1.3rem
+}
+
+.profilecard .cardbadges .platformbadge .platformbadge-name {
+  padding: 0 .3rem 0 .1rem
+}
+
+.profilecard .cardbadges .platformbadge.blue {
+  background: #ebf3ff;
+  border-color: #b8d5ff
+}
+
+.profilecard .cardbadges .platformbadge.green {
+  background: #ecf8ed;
+  border-color: #c7e9ca
+}
+
+.profilecard .cardbadges .platformbadge.purple {
+  background: #efeaf8;
+  border-color: #d0c4eb
+}
+
+.profilecard .cardbadges .platformbadge.gray {
+  background: #f0f0f0;
+  border-color: #d0d0d0
+}
+
+.profilecard .cardbadges .platformbadge.ENS .platformbadge-icon,
+.profilecard .cardbadges .platformbadge.blue .platformbadge-icon {
+  color: #5298ff
+}
+
+.profilecard .cardbadges .platformbadge.lens .platformbadge-icon,
+.profilecard .cardbadges .platformbadge.green .platformbadge-icon {
+  color: #6bc674
+}
+
+.profilecard .cardbadges .platformbadge.farcaster .platformbadge-icon,
+.profilecard .cardbadges .platformbadge.purple .platformbadge-icon {
+  color: #8465cb
+}
