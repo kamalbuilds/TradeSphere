@@ -6,6 +6,7 @@ import { MediaRenderer } from "@thirdweb-dev/react";
 import Messages from "../components/Message";
 import { Accordion } from "@chakra-ui/react";
 import Subscription from "../components/Subscription";
+import Link from "next/link";
 
 export default function Home() {
   // Load the top 25 most followed Lens profiles
@@ -17,6 +18,10 @@ export default function Home() {
   return (
     <>
       <div className={styles.container}>
+
+        <div className="flex justify-start w-[100%]">
+          <Link href='/transactionbuilder' className="rounded-md bg-red-600 text-white px-8 py-2">Use Transaction Builder</Link>
+        </div>
         <div className={styles.iconContainer}>
           <Image
             src="/thirdweb.svg"
@@ -63,8 +68,8 @@ export default function Home() {
             ))
           )}
           <Accordion defaultIndex={[1]} allowToggle mt={10} rounded="xl">
-          <Messages />
-          <Subscription />
+            <Messages />
+            <Subscription />
           </Accordion>
         </div>
       </div>
