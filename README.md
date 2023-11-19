@@ -10,7 +10,7 @@
 
 Gearbot - SparkLend - 1inch marginal trades
 
-![WhatsApp Image 2023-11-19 at 10 23 15_4b9bf13f](https://github.com/kamalbuilds/TradeSphere/assets/95926324/6ebe2b5a-ed75-4c94-ae19-bf8a7a54939d)
+![WhatsApp Image 2023-11-19 at 10 23 13_8939f59a](https://github.com/kamalbuilds/TradeSphere/assets/95926324/b5ef6d9a-e6dd-44bb-aaa6-a08aebab38ab)
 
 Cow Swaps- JIT Place Smart Orders using the Safe AA kit 
 
