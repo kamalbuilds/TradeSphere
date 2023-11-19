@@ -2,11 +2,14 @@
 
 **Tagline: Empowering DeFi Traders with a Social Edge**
 
-![WhatsApp Image 2023-11-19 at 09 36 58_79ba2ad5](https://github.com/kamalbuilds/TradeSphere/assets/95926324/100c4e4b-65e2-4e9b-ba6d-9b3b122b6927)
+![WhatsApp Image 2023-11-19 at 10 14 29_f8edf397](https://github.com/kamalbuilds/TradeSphere/assets/95926324/c3280556-faec-4096-90d1-86cdd3a24908)
+
 
 ## Technologies used
 
-Gearbot- 1inch 
+Gearbot - SparkLend - 1inch marginal trades
+
+![WhatsApp Image 2023-11-19 at 10 23 15_4b9bf13f](https://github.com/kamalbuilds/TradeSphere/assets/95926324/6ebe2b5a-ed75-4c94-ae19-bf8a7a54939d)
 
 Cow Swaps- JIT Place Smart Orders using the Safe AA kit 
 
