@@ -3,6 +3,7 @@ type Profile = {
   name: string;
   bio: string;
   handle: string;
+  ownedBy: string;
   picture: {
     original: {
       url: string;

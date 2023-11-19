@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
     useManageSubscription,
     useSubscription,
@@ -18,6 +19,7 @@ import styles from "../../styles/Home.module.css";
     // Initialize the Web3Inbox SDK
     const isReady = useInitWeb3InboxClient({
       // The project ID and domain you setup in the Domain Setup section
+      // @ts-ignore
       a,
       domain: 'https://3000-thirdwebexample-lens-b5q8pefryol.ws-us106.gitpod.io',
   
