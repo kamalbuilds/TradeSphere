@@ -12,8 +12,8 @@ const PostTransactionBuilder = ({
     setPostContractAddress,
     postContractAddress
 }: any) => {
-// @ts-ignore
-    const { setReceiverAddress, setPostHook, postHook, quote } = useContext(TransactionContext);
+    // @ts-ignore
+    const { setReceiverAddress, setPostHook, setOrderUID, postHook, quote } = useContext(TransactionContext);
     // const [contractAddress, setContractAddress] = useState();
     const [contractABI, setContractABI] = useState({});
     const [functions, setFunctions] = useState<any>({});
@@ -38,6 +38,7 @@ const PostTransactionBuilder = ({
     const handleContractAddress = async () => {
         setFunctionSelected(null);
         setFunctions({});
+        setOrderUID('');
         setPostHook('');
         setFunctionInput(null);
         setIsLoading(true);

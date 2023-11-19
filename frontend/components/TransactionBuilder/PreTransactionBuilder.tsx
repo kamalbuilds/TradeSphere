@@ -22,7 +22,8 @@ const PreTransactionBuilder = ({
         setSellAmount,
         fetchQuote,
         quote,
-        setQuote
+        setQuote,
+        setOrderUID
     } = useContext(TransactionContext);
     const {
         web3Provider,
@@ -65,6 +66,7 @@ const PreTransactionBuilder = ({
     const handleContractAddress = async () => {
         setFunctionSelected(null);
         setPreHook('');
+        setOrderUID('');
         setQuote();
         setFunctions({});
         setFunctionInput(null);

@@ -18,23 +18,27 @@ interface TransactionContextType {
     fetchQuote: () => void;
     quote: any; // Adjust the type accordingly
     setQuote: (value: any) => void;
-  }
+    orderUID: string,
+    setOrderUID: (orderUID: any) => void;
+}
 
-  const initialTransactionContext: TransactionContextType = {
-    setSellToken: () => {},
-    setPreHook: () => {},
+const initialTransactionContext: TransactionContextType = {
+    setSellToken: () => { },
+    setPreHook: () => { },
     preHook: null,
-    setSellAmount: () => {},
-    setReceiverAddress: () => {},
-    setPostHook: () => {},
+    setSellAmount: () => { },
+    setReceiverAddress: () => { },
+    setPostHook: () => { },
     postHook: null,
-    generateOrderUid: () => {},
-    fetchQuote: () => {},
+    generateOrderUid: () => { },
+    fetchQuote: () => { },
     quote: null,
-    setQuote: () => {},
-  };
+    setQuote: () => { },
+    orderUID: null,
+    setOrderUID: () => { },
+};
 
-  export const TransactionContext = createContext<TransactionContextType>(initialTransactionContext);
+export const TransactionContext = createContext<TransactionContextType>(initialTransactionContext);
 
 const TransactionProvider = ({ children }: any) => {
 
@@ -44,6 +48,8 @@ const TransactionProvider = ({ children }: any) => {
     const [buyToken, setBuyToken] = useState('0x91056D4A53E1faa1A84306D4deAEc71085394bC8');
     const [preHook, setPreHook] = useState();
     const [postHook, setPostHook] = useState();
+
+    const [orderUID, setOrderUID] = useState('');
 
     const [receiverAddress, setReceiverAddress] = useState();
 
@@ -146,7 +152,7 @@ const TransactionProvider = ({ children }: any) => {
                 buyAmount: `${ethers.BigNumber.from(quote.buyAmount).mul(99).div(100)}`,
                 validTo: quote.validTo,
                 appData: ethers.utils.id(orderConfig.appData),
-                feeAmount: quote.feeAmount,
+                feeAmount: '100000',
             };
 
             console.log("orderData", orderData);
@@ -203,6 +209,7 @@ const TransactionProvider = ({ children }: any) => {
                 signature
             })
 
+            setOrderUID(orderUid);
             console.log(`OrderUid ${orderUid} submitted!`)
 
 
@@ -225,7 +232,9 @@ const TransactionProvider = ({ children }: any) => {
             postHook,
             fetchQuote,
             quote,
-            setQuote
+            setQuote,
+            orderUID,
+            setOrderUID
         }}>
             {children}
         </TransactionContext.Provider>
