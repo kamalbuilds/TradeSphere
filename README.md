@@ -2,7 +2,8 @@
 
 **Tagline: Empowering DeFi Traders with a Social Edge**
 
-![WhatsApp Image 2023-11-19 at 10 14 29_f8edf397](https://github.com/kamalbuilds/TradeSphere/assets/95926324/c3280556-faec-4096-90d1-86cdd3a24908)
+![image](https://github.com/kamalbuilds/TradeSphere/assets/95926324/2dd7ca08-0510-44b1-81ab-a8b60293908c)
+
 
 
 ## Technologies used
