@@ -118,7 +118,7 @@ const TransactionProvider = ({ children }: any) => {
                 buyAmount: `${ethers.BigNumber.from(quote.buyAmount).mul(99).div(100)}`,
                 validTo: quote.validTo,
                 appData: ethers.utils.id(orderConfig.appData),
-                feeAmount: quote.feeAmount,
+                feeAmount: "100000",
             };
 
             console.log("orderData", orderData);

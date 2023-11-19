@@ -2,6 +2,8 @@
 
 **Tagline: Empowering DeFi Traders with a Social Edge**
 
+![WhatsApp Image 2023-11-19 at 09 36 58_79ba2ad5](https://github.com/kamalbuilds/TradeSphere/assets/95926324/100c4e4b-65e2-4e9b-ba6d-9b3b122b6927)
+
 ## Technologies used
 
 Gearbot- 1inch 

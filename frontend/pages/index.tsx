@@ -20,7 +20,7 @@ export default function Home() {
       <div className={styles.container}>
 
         <div className="flex justify-start w-[100%]">
-          <Link href='/transactionbuilder' className="rounded-md bg-red-600 text-white px-8 py-2">Use Transaction Builder</Link>
+          <Link href='/transactionbuilder' className="rounded-md bg-red-600 text-white px-8 py-2">Use Hooks Builder</Link>
         </div>
         <div className={styles.iconContainer}>
           <Image
@@ -38,7 +38,7 @@ export default function Home() {
             alt="sol"
           />
         </div>
-        <h1 className={styles.h1}>Lens SocialFI</h1>
+        <h1 className={styles.h1}>Trade Sphere</h1>
         <p className={styles.explain}>
           Build a simple application using thirdweb and Lens!
         </p>

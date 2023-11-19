@@ -11,8 +11,8 @@ import {ICreditManagerV3} from "@gearbox-protocol/core-v3/contracts/interfaces/I
 import {ICreditFacadeV3} from "@gearbox-protocol/core-v3/contracts/interfaces/ICreditFacadeV3.sol";
 import {ICreditFacadeV3Multicall} from "@gearbox-protocol/core-v3/contracts/interfaces/ICreditFacadeV3Multicall.sol";
 import {IPool as ISparkPool} from "@spark/ISparkPool.sol";
-import "forge-std/console.sol";
-import "@1inch/interfaces/IAggregationRouterV5.sol";
+import "forge-std/~console.sol";
+import "@1inch/interfaces/~IAggregationRouterV5.sol";
 
 contract GearSparkbot {
     ISparkPool private sparkPool;

@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
+const projectId = process.env.NEXT_PUBLIC_APP_PROJECT_ID;
 if (!projectId) {
   throw new Error("You need to provide NEXT_PUBLIC_PROJECT_ID env variable");
 }
@@ -9,7 +9,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const notifyApiSecret = process.env.NOTIFY_API_SECRET;
+  const notifyApiSecret = process.env.NEXT_PUBLIC_APP_NOTIFY_API_SECRET;
   if (!notifyApiSecret) {
     throw new Error("You need to provide NOTIFY_API_SECRET env variable");
   }

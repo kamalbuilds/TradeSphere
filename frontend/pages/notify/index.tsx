@@ -14,7 +14,7 @@ import styles from "../../styles/Home.module.css";
     const  address  = useAddress();
     const sdk = useSDK();
   
-    const a = process.env.REACT_APP_WC_PROJECT_ID;
+    const a = process.env.NEXT_PUBLIC_APP_WC_PROJECT_ID;
     // Initialize the Web3Inbox SDK
     const isReady = useInitWeb3InboxClient({
       // The project ID and domain you setup in the Domain Setup section

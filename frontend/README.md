@@ -10,7 +10,9 @@ Next.ID - Relational Service for Universal Profiles and Discovery
 
 Gearbot- 1inch 
 
-Cow - Smart Orders
+Cow - Smart Orders using Safe
+
+https://explorer.cow.fi/goerli/orders/0xf653246d0ed958305df53a891b3a4ec660f287d63b1e854654f9640563ef911d6968ae0c8be0467b0a54e02faa05111d3da755596559938b?tab=overview
 
 Lens - Onchain Publication Actions
 

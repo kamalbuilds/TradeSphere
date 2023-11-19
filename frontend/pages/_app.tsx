@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
   // Initialize React Query Client
   const queryClient = new QueryClient();
 
-  // Specify what network you're going to interact with
+  // Specify what network yf651e183e87484fb9a0e4743b2b71bebou're going to interact with
   const activeChain = "mumbai";
 
   return (

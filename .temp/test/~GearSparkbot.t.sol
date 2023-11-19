@@ -2,7 +2,7 @@
 pragma solidity ^0.8.10;
 
 import {Test} from "@forge-std/Test.sol";
-import "forge-std/console.sol";
+import "forge-std/~console.sol";
 
 import {GearSparkbot} from "../src/GearSparkbot.sol";
 import {IERC20} from "@openzeppelin/contracts/interfaces/IERC20.sol";
@@ -14,8 +14,8 @@ import {BotListV3} from "@gearbox-protocol/core-v3/contracts/core/BotListV3.sol"
 import {PoolV3} from "@gearbox-protocol/core-v3/contracts/pool/PoolV3.sol";
 import {ICreditFacadeV3Multicall} from "@gearbox-protocol/core-v3/contracts/interfaces/ICreditFacadeV3Multicall.sol";
 import {CreditConfiguratorV3} from "@gearbox-protocol/core-v3/contracts/credit/CreditConfiguratorV3.sol";
-import "@gearbox-protocol/core-v3/contracts/interfaces/IAddressProviderV3.sol";
-import "@gearbox-protocol/core-v3/contracts/interfaces/ICreditFacadeV3Multicall.sol";
+import "@gearbox-protocol/core-v3/contracts/interfaces/~IAddressProviderV3.sol";
+import "@gearbox-protocol/core-v3/contracts/interfaces/~ICreditFacadeV3Multicall.sol";
 import {IBotListV3} from "@gearbox-protocol/core-v3/contracts/interfaces/IBotListV3.sol";
 
 /****
