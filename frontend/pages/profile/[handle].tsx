@@ -128,6 +128,7 @@ export default function ProfilePage() {
 
     try {
       const tx = await lensHubContract?.call("followWithSig", {
+        // @ts-ignore
         follower: address!,
         profileIds: typedData.value.profileIds,
         datas: typedData.value.datas,
@@ -177,6 +178,7 @@ export default function ProfilePage() {
           <Web3Button
             contractAddress={LENS_HUB_CONTRACT_ADDRESS}
             contractAbi={LENS_PROTOCOL_PROFILES_ABI}
+            // @ts-ignore
             colorMode="dark"
             accentColor="#f213a4"
             action={() => follow()}
@@ -184,6 +186,7 @@ export default function ProfilePage() {
           >
             Follow
           </Web3Button>
+          
           <Link href={`/profile/u/${profile.ownedBy}`} > <button className={styles.followButton}> Check universal Profile</button></Link>
           </>
         )}

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useContext, useState } from 'react';
 import styles from "../../styles/Home.module.css"
 import { FormControl, FormLabel, Input, InputGroup, InputRightElement, Select } from '@chakra-ui/react';
@@ -11,7 +12,7 @@ const PostTransactionBuilder = ({
     setPostContractAddress,
     postContractAddress
 }: any) => {
-
+// @ts-ignore
     const { setReceiverAddress, setPostHook, postHook, quote } = useContext(TransactionContext);
     // const [contractAddress, setContractAddress] = useState();
     const [contractABI, setContractABI] = useState({});

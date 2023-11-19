@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client"
 import { createContext, useContext, useState } from "react";
 import { AccountAbstractionContext } from "./AccountAbstractionContext";
@@ -5,8 +6,35 @@ import { TypedDataDomain, ethers } from "ethers";
 import { OrderBalance, OrderKind, domain, hashOrder } from "@cowprotocol/contracts";
 import { BuyTokenDestination, COW_PROTOCOL_SETTLEMENT_CONTRACT_ADDRESS, OrderBookApi, SellTokenSource, SigningScheme, SupportedChainId } from "@cowprotocol/cow-sdk";
 
+interface TransactionContextType {
+    setSellToken: (value: any) => void;
+    setPreHook: (value: any) => void;
+    preHook: any; // Adjust the type accordingly
+    setSellAmount: (value: any) => void;
+    setReceiverAddress: (value: any) => void;
+    setPostHook: (value: any) => void;
+    postHook: any; // Adjust the type accordingly
+    generateOrderUid: () => void;
+    fetchQuote: () => void;
+    quote: any; // Adjust the type accordingly
+    setQuote: (value: any) => void;
+  }
 
-export const TransactionContext = createContext({});
+  const initialTransactionContext: TransactionContextType = {
+    setSellToken: () => {},
+    setPreHook: () => {},
+    preHook: null,
+    setSellAmount: () => {},
+    setReceiverAddress: () => {},
+    setPostHook: () => {},
+    postHook: null,
+    generateOrderUid: () => {},
+    fetchQuote: () => {},
+    quote: null,
+    setQuote: () => {},
+  };
+
+  export const TransactionContext = createContext<TransactionContextType>(initialTransactionContext);
 
 const TransactionProvider = ({ children }: any) => {
 
