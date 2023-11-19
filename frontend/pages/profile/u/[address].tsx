@@ -10,7 +10,7 @@
     fetchDotBitProfile 
   } from '../../../utils/apiprofiles';
   import { useRouter } from 'next/router';
-
+import Image from 'next/image';
   
   const UserCard = ( ) => {
     const [profileData, setProfileData] = useState(null);
@@ -37,7 +37,7 @@
           {profileData[0]?.avatar && (
             <>
               <div className="cardavatar">
-                <img alt="Profile Avatar" loading="lazy" width="180" height="180" decoding="async" data-nimg="1" className="avatar" style={{color: 'transparent'}} src={profileData[0].avatar} />
+                <Image alt="Profile Avatar" loading="lazy" width="180" height="180" decoding="async" data-nimg="1" className="avatar" style={{color: 'transparent'}} src={profileData[0].avatar} />
               </div>
               <div className={styles.cardcontent}>
                 <div className="cardname">{profileData[0].displayName || profileData[0].address}</div>
