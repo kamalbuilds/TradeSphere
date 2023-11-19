@@ -10,6 +10,9 @@ import Link from "next/link";
 import styles from "./Header.module.css";
 import useLensUser from "../../utils/useLensUser";
 import login from "../../utils/login";
+import { useContext } from "react";
+import { AccountAbstractionContext } from "../../contexts/AccountAbstractionContext";
+import { useRouter } from "next/router";
 
 export default function Header() {
   const sdk = useSDK();
@@ -18,6 +21,9 @@ export default function Header() {
   const [, switchNetwork] = useNetwork();
   const { isSignedIn, setIsSignedIn, loadingSignIn, profile, loadingProfile } =
     useLensUser();
+
+  const { safeSelected, logoutWeb3Auth, loginWeb3Auth } = useContext(AccountAbstractionContext);
+
 
   async function signIn() {
     if (!address || !sdk) return;
@@ -31,6 +37,9 @@ export default function Header() {
     setIsSignedIn(true);
   }
 
+  const router = useRouter();
+  const { pathname } = router;
+
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.homeNavigator}>
@@ -38,7 +47,17 @@ export default function Header() {
         <h1 className={styles.logoText}>Lens SocialFI</h1>
       </Link>
 
-      <RightSide />
+      {safeSelected ? <>
+
+        <div onClick={logoutWeb3Auth} className="bg-white rounded-md text-black px-[14px] py-[7px]"> Log out</div>
+
+      </> : <div className="flex flex-row gap-2">
+        {pathname !== '/safe' && <RightSide />}
+        {!address && <Link href='/safe' className="bg-white font-medium flex items-center rounded-md text-black px-[14px] py-[7px]">Connect with safe</Link>}
+      </div>}
+
+      {!safeSelected && <div onClick={loginWeb3Auth} className="bg-white rounded-md text-black px-[14px] py-[7px]"> Log In</div>
+      }
     </div>
   );
 
